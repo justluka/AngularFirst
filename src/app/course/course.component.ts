@@ -10,7 +10,9 @@ import { CoursesService } from '../courses.service';
 })
 export class CourseComponent  {
 
-    title = "List of courses...."
+    title = "List of courses....";
+    imageUrl="https://s3.amazonaws.com/9lessonspics/nodeapi/nodebanner.png";
+    colspan=2;
     courses;
 
     constructor(service:CoursesService){
