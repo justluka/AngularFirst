@@ -1,5 +1,4 @@
-//import { CoursesService } from './../courses.service';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { CoursesService } from '../courses.service';
 
 @Component({
@@ -20,6 +19,13 @@ export class CourseComponent  {
     colspan=2;
     courses;
     isActive=true;
+
+    @Input() isFavorie: boolean;
+
+    post= {
+       title:"Titles",
+       isFavorite: true
+    }
 
     constructor(service:CoursesService){
        //let service = new CoursesService();
