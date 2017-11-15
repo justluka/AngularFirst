@@ -1,5 +1,13 @@
 <h1>
-  {{title}}
+  {{title | uppercase}} <br>
+  {{noCourses | number}} <br>
+  {{rating | number:'1.2-2'}} <br/>
+  {{price | currency}} <br/>
+  {{releaseDate | date:'shortDate'}} <br/>
+  {{text | summary:10}} <br/>
+  
+
+  
 </h1>
 
 <ul>
@@ -16,3 +24,7 @@
     </td>
   </tr>
 </table>
+<div (click)="onOther($event)">
+  <button class="btn btn-primary" (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'yellow'"> Save</button>
+</div>
+<input [(ngModel)]="email" (keyup.enter)="onKeyup()"/>
