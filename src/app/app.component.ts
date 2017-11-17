@@ -34,4 +34,35 @@ export class AppComponent {
       console.log("like changed : ", eventArgs);
     };
 
+
+     viewMode = 'map';
+
+     coursesList;
+
+      onAdd(){
+        this.coursesList.push({id:4,name:'course4'});
+      }
+onRemove(course){
+ let index= this.coursesList.indexOf(course);
+ this.coursesList.splice(index,1);
+};
+
+onChange(course){
+  course.name='UPDATED';
+ };
+
+loadCourses(){
+  this.coursesList=[
+    { id: 1, name: 'course 1'},
+    { id: 2, name: 'course 2'},
+    { id: 3, name: 'course 3'}
+  ];
+
+};
+
+
+trackCourse(index, course){
+  return course? course.id: undefined;
+}
+
 }
