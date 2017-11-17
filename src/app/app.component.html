@@ -1,4 +1,32 @@
 <h1> Angular </h1>
+<h2>from 64 to</h2>
+
+
+<div *ngIf="courses.length > 0; then coursesList else noCourses">
+</div>
+
+<ng-template #coursesList>
+    List of courses with ng template for large elements trees
+</ng-template>
+
+<ng-template #noCourses>
+    No Courses yet with ng template
+</ng-template>
+
+<br>
+<div [hidden]="courses.length == 0">
+     Courses with Hidden for small element trees
+</div>
+<div [hidden]="courses.length > 0">
+      No   Courses with Hidden
+        
+</div>
+
+<br><br>
+
+
+
+<h2>from 1 to 62</h2>
 <courses></courses>
 <h1>Hello world</h1>
 Likes: <like [likesCount]="tweet.likesCount" 
