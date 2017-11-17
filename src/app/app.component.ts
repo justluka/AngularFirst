@@ -11,6 +11,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  task={
+    title: 'Review applications',
+    assignee:{ name:null}
+  };
+  canSave=true;
   title = 'app';
   post={
     title:"Title",

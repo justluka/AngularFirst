@@ -1,24 +1,11 @@
 <h1> Angular </h1>
 <h2>from 64 to</h2>
-
+<h2> {{task.assignee?.name}}</h2>
 <h1>ng for</h1>
-<button (click)="loadCourses()">Load Courses</button>
+
 <br>
+<input type="text" [appInputFormat]="'uppercase'">
 
-<button (click)="onAdd()">Add</button>
-<div>
- <ul>
-     <li *ngFor="let courseList of coursesList; trackBy: trackCourse; index as i; even as isEven">
-         {{i+1}}-{{courseList.name}} <span *ngIf="isEven">(EVEN)</span>
-         <button (click)="onRemove(courseList)">Remove</button>
-         <button (click)="onChange(courseList)">Update</button>
-         
-     </li>
- </ul>
-</div>
-
-
-<!--
 <br>
 <h1>ng switch</h1>
 
