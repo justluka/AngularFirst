@@ -6,11 +6,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./contact-form.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ContactFormComponent implements OnInit {
+export class ContactFormComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+    
 
 }
