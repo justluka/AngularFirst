@@ -1,16 +1,17 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-zippy',
+  selector: 'zippy',
   templateUrl: './zippy.component.html',
   styleUrls: ['./zippy.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ZippyComponent implements OnInit {
+export class ZippyComponent   {
+  @Input ('title') title: string;
+  isExpanded: boolean=true;
 
-  constructor() { }
-
-  ngOnInit() {
+  toggle(){
+     this.isExpanded = !this.isExpanded;
   }
 
 }
